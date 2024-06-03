@@ -146,3 +146,4 @@ C:\Users\Owner\VS Code\C#\RaveUp\api\bin\Debug\net8.0\Microsoft.AspNetCore.Ident
 C:\Users\Owner\VS Code\C#\RaveUp\api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Owner\VS Code\C#\RaveUp\api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Owner\VS Code\C#\RaveUp\api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Owner\VS Code\C#\RaveUp\api\obj\Debug\net8.0\api.sourcelink.json
