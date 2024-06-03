@@ -16,7 +16,7 @@ namespace api.Mappers
                 Id = commentModel.Id,
                 Body = commentModel.Body,
                 ReviewId = commentModel.ReviewId,
-                CreatedBy = commentModel.UserAccount.UserName 
+                CreatedBy = commentModel.UserAccount?.UserName 
 
             };
         }

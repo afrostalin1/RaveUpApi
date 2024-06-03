@@ -53,7 +53,7 @@ namespace api.Repository
 
         public async Task<ReviewComment?> UpdateAsync(int id, ReviewComment commentModel)
         {
-            var existingComment = await _context.ReviewComments.FindAsync(id);
+            var existingComment = await _context.ReviewComments.Include(x => x.UserAccount).FirstOrDefaultAsync(c => c.Id == id);;
            
             if (existingComment == null)
             {
