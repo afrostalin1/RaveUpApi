@@ -23,15 +23,18 @@ namespace api.Models
 
         public int Rating { get; set; }
 
-        public string ReviewBody {get; set; } = string.Empty;
+        public string ReviewBody { get; set; } = string.Empty;
 
         public DateTime CreatedOn { get; set; } = DateTime.Now;
 
+        public string UserAccountId { get; set; }
+        public UserAccount UserAccount { get; set; }
+
         public List<ReviewComment> ReviewComments { get; set; } = new List<ReviewComment>();
 
-        
 
 
-    
+
+
     }
 }

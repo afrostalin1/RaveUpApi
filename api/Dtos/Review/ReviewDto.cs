@@ -21,6 +21,8 @@ namespace api.Dtos.Review
 
         public string ReviewBody { get; set; } = string.Empty;
 
+        public string CreatedBy { get; set; } = string.Empty;
+
         public DateTime CreatedOn { get; set; } = DateTime.Now;
 
         public List<ReviewCommentDto> ReviewComments { get; set; }

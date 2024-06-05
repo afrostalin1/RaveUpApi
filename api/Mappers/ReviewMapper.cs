@@ -19,6 +19,7 @@ namespace api.Mappers
                 Genre = reviewModel.Genre,
                 Rating = reviewModel.Rating,
                 ReviewBody = reviewModel.ReviewBody,
+                CreatedBy = reviewModel.UserAccount?.UserName,
                 CreatedOn = reviewModel.CreatedOn,
                 //This is mapping the comments in a list since Reviews and reviewcomments are in a one to many relationship
                 ReviewComments = reviewModel.ReviewComments.Select(c => c.ToReviewCommentDto()).ToList() 

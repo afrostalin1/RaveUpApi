@@ -77,12 +77,6 @@ namespace api.Controllers
                 return BadRequest("Review does not exist");
             }
 
-            // Debugging: Log all claims
-            foreach (var claim in User.Claims)
-            {
-                Console.WriteLine($"Claim Type: {claim.Type}, Claim Value: {claim.Value}");
-            }
-
             string username;
             try
             {
