@@ -14,11 +14,11 @@ namespace api.Mappers
             return new ReviewDto
             {
                 Id = reviewModel.Id,
-                Title = reviewModel.Title,
+                Artist = reviewModel.Artist,
                 Venue = reviewModel.Venue,
                 Genre = reviewModel.Genre,
                 Rating = reviewModel.Rating,
-                Body = reviewModel.Body,
+                ReviewBody = reviewModel.ReviewBody,
                 CreatedOn = reviewModel.CreatedOn,
                 //This is mapping the comments in a list since Reviews and reviewcomments are in a one to many relationship
                 ReviewComments = reviewModel.ReviewComments.Select(c => c.ToReviewCommentDto()).ToList() 
@@ -29,11 +29,11 @@ namespace api.Mappers
         {
             return new Review
             {
-                Title = reviewDto.Title,
+                Artist = reviewDto.Artist,
                 Venue = reviewDto.Venue,
                 Genre = reviewDto.Genre,
                 Rating = reviewDto.Rating,
-                Body = reviewDto.Body
+                ReviewBody = reviewDto.ReviewBody
             };
 
         }

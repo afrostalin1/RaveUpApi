@@ -49,9 +49,9 @@ namespace api.Repository
 
 
             //Each of these if statements applies the 
-            if(!string.IsNullOrWhiteSpace(query.Title))
+            if(!string.IsNullOrWhiteSpace(query.Artist))
             {
-                reviews = reviews.Where(s => s.Title.Contains(query.Title));
+                reviews = reviews.Where(s => s.Artist.Contains(query.Artist));
             }
 
             if(!string.IsNullOrWhiteSpace(query.Venue))
@@ -69,7 +69,7 @@ namespace api.Repository
                 if(query.SortBy.Equals("Title", StringComparison.OrdinalIgnoreCase))
                 {
                     // : is a ternary operator saying this will happen if its false
-                    reviews = query.IsDescending ? reviews.OrderByDescending(s => s.Title) : reviews.OrderBy(s => s.Title);
+                    reviews = query.IsDescending ? reviews.OrderByDescending(s => s.Artist) : reviews.OrderBy(s => s.Artist);
                 }
 
                 if(query.SortBy.Equals("Venue", StringComparison.OrdinalIgnoreCase))
@@ -117,11 +117,11 @@ namespace api.Repository
                 return null;
             }
 
-            existingReview.Title = updateReviewRequestDto.Title;
+            existingReview.Artist = updateReviewRequestDto.Artist;
             existingReview.Venue = updateReviewRequestDto.Venue;
             existingReview.Genre = updateReviewRequestDto.Genre;
             existingReview.Rating = updateReviewRequestDto.Rating;
-            existingReview.Body = updateReviewRequestDto.Body;
+            existingReview.ReviewBody = updateReviewRequestDto.ReviewBody;
 
             await _context.SaveChangesAsync();
 

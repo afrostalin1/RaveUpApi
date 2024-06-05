@@ -60,7 +60,7 @@ namespace api.Repository
                 return null;
             }
 
-            existingComment.Body = commentModel.Body;
+            existingComment.CommentBody = commentModel.CommentBody;
 
             await _context.SaveChangesAsync();
 

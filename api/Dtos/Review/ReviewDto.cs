@@ -11,7 +11,7 @@ namespace api.Dtos.Review
     {
         public int Id { get; set; }
 
-        public string Title { get; set; } = string.Empty;
+        public string Artist { get; set; } = string.Empty;
 
         public string Venue { get; set; } = string.Empty;
 
@@ -19,7 +19,7 @@ namespace api.Dtos.Review
 
         public int Rating { get; set; }
 
-        public string Body { get; set; } = string.Empty;
+        public string ReviewBody { get; set; } = string.Empty;
 
         public DateTime CreatedOn { get; set; } = DateTime.Now;
 

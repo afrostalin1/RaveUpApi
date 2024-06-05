@@ -9,8 +9,8 @@ namespace api.Dtos.Review
     public class UpdateReviewRequestDto
     {
         [Required]
-        [MaxLength(50, ErrorMessage = "Title cannot be over 50 charaters")]
-        public string Title { get; set; } = string.Empty;
+        [MaxLength(50, ErrorMessage = "Artist cannot be over 50 charaters")]
+        public string Artist { get; set; } = string.Empty;
 
 
         [Required]
@@ -28,6 +28,6 @@ namespace api.Dtos.Review
         [Required]
         [MinLength(5, ErrorMessage = "Comment must be at least 5 characters")]
         [MaxLength(500, ErrorMessage = "Comment can not be over 500 characters")]
-        public string Body { get; set; } = string.Empty;
+        public string ReviewBody { get; set; } = string.Empty;
     }
 }

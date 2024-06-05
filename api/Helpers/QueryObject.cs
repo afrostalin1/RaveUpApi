@@ -8,7 +8,7 @@ namespace api.Helpers
     public class QueryObject
     {
         
-        public string? Title {get; set;} = null;
+        public string? Artist {get; set;} = null;
 
         public string? Venue {get; set;} = null;
 
@@ -21,7 +21,5 @@ namespace api.Helpers
         public int PageNumber { get; set; } = 1;
 
         public int PageSize { get; set; } = 20;
-
-        // public int Rating {get; set;}
     }
 }

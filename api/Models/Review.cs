@@ -7,11 +7,15 @@ using System.Threading.Tasks;
 
 namespace api.Models
 {
+    /// <summary>
+    /// Represents the database model of the 'Review' table.
+    /// A review is a user's assessment of an artist's performance.
+    /// </summary>
     public class Review
     {
         public int Id { get; set; }
 
-        public string Title { get; set; } = string.Empty;
+        public string Artist { get; set; } = string.Empty;
 
         public string Venue { get; set; } = string.Empty;
 
@@ -19,7 +23,7 @@ namespace api.Models
 
         public int Rating { get; set; }
 
-        public string Body {get; set; } = string.Empty;
+        public string ReviewBody {get; set; } = string.Empty;
 
         public DateTime CreatedOn { get; set; } = DateTime.Now;
 

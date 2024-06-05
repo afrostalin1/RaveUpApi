@@ -9,8 +9,9 @@ namespace api.Dtos.ReviewComment
     {
         public int Id { get; set; }
         public int? ReviewId { get; set; } // Navigation property
-        public string Body { get; set; } = string.Empty;
+        public string CommentBody { get; set; } = string.Empty;
         public string CreatedBy { get; set; } = string.Empty;
+        public DateTime CreatedOn { get; set; } = DateTime.Now;
 
 
 

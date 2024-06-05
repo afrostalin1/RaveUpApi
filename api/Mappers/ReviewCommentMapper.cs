@@ -14,18 +14,20 @@ namespace api.Mappers
             return new ReviewCommentDto
             {
                 Id = commentModel.Id,
-                Body = commentModel.Body,
+                CommentBody = commentModel.CommentBody,
                 ReviewId = commentModel.ReviewId,
-                CreatedBy = commentModel.UserAccount?.UserName 
+                CreatedBy = commentModel.UserAccount?.UserName, 
+                CreatedOn = commentModel.CreatedOn
+
 
             };
         }
-
+        
         public static ReviewComment ToReviewCommentFromCreate(this CreateReviewCommentDto commentDto, int reviewId)
         {
             return new ReviewComment
             {
-                Body = commentDto.Body,
+                CommentBody = commentDto.CommentBody,
                 ReviewId = reviewId
 
             };
@@ -36,7 +38,7 @@ namespace api.Mappers
         {
             return new ReviewComment
             {
-                Body = commentDto.Body,
+                CommentBody = commentDto.CommentBody,
 
             };
         }
