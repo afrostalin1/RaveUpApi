@@ -6,7 +6,10 @@ using Microsoft.AspNetCore.Identity;
 
 namespace api.Models
 {
-    //IdentityUser is inherited from because it forms the base class for a user but you can add to it
+    /// <summary>
+    /// A model representing the UserAccount table.
+    /// Its an empty file because it just inherits the base fields from AspNet.Core Identity.
+    /// </summary>
     public class UserAccount : IdentityUser
     {
         

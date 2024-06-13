@@ -9,6 +9,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api.Data
 {
+    /// <summary>
+    /// Contains settings for the database to use
+    /// </summary>
     public class ApplicationDBContext : IdentityDbContext<UserAccount>
     {
         public ApplicationDBContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
@@ -19,11 +22,13 @@ namespace api.Data
         public DbSet<Review> Reviews { get; set; }
 
         public DbSet<ReviewComment> ReviewComments { get; set; }
-
+        /// <summary>
+        /// When the database is created, this method creates roles to use
+        /// </summary>
+        /// <param name="builder">The builder from Entity Framework</param>
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            //Creates roles that useraccounts will use
             List<IdentityRole> roles = new List<IdentityRole>
             {
                 new IdentityRole

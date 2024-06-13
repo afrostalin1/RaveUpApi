@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 
 namespace api.Helpers
 {
+    /// <summary>
+    /// Filter Object for Reviews to define how to filter them by using GetAll() in the controller
+    /// </summary>
     public class QueryObject
-    {
-        
+    {  
         public string? Artist {get; set;} = null;
 
         public string? Venue {get; set;} = null;

@@ -10,6 +10,8 @@ namespace api.Models
     /// <summary>
     /// Represents the database model of the 'Review' table.
     /// A review is a user's assessment of an artist's performance.
+    /// To make foriegn keys, you set the field to what you want it to be and then use a navigation property to make the foreign key
+    /// e.g. UserAccountId is the column, and UserAccount is the navigation property.
     /// </summary>
     public class Review
     {
