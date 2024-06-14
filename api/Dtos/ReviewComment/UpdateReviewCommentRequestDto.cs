@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace api.Dtos.ReviewComment
 {
+    /// <summary>
+    /// Data Transfer Object representing the creation of a ReviewComment in a HTTPPut method
+    /// </summary>
     public class UpdateReviewCommentRequestDto
     {
         [Required]

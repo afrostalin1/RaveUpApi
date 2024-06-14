@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace api.Dtos.UserAccount
 {
+    /// <summary>
+    /// Data Transfer Object used to register new user
+    /// </summary>
     public class RegisterDto
     {
         [Required]

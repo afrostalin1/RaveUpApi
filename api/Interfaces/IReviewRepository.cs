@@ -8,6 +8,9 @@ using api.Models;
 
 namespace api.Repository
 {
+    /// <summary>
+    /// Interface defining methods the Review repository should implement
+    /// </summary>
     public interface IReviewRepository
     {
         Task<List<Review>> GetAllAsync(QueryObject query);

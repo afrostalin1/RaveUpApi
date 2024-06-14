@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 // You will put your data validation in the dto
 namespace api.Dtos.ReviewComment
 {
+    /// <summary>
+    /// Data Transfer Object representing the creation of a ReviewComment in a HTTPPost method
+    /// </summary>
     public class CreateReviewCommentDto
     {
         //Here you set that the Body is required, the min length is 5 and the max length is 500

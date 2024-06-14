@@ -11,16 +11,31 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace api.Service
 {
+    /// <summary>
+    /// Service class for generating JWT tokens.
+    /// </summary>
     public class TokenService : ITokenService
     {
         private readonly IConfiguration _config;
+
         private readonly SymmetricSecurityKey _key;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TokenService"/> class.
+        /// </summary>
+        /// <param name="config">The configuration settings.</param>
         public TokenService(IConfiguration config)
         {
             _config = config;
             //Symmetricseucritykey will encript it in a unique way so that only oru server can recongize the token
             _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JWT:SigningKey"]));
         }
+
+        /// <summary>
+        /// Creates a JWT token for the specified user account.
+        /// </summary>
+        /// <param name="userAccount">The user account for which to create the token.</param>
+        /// <returns>The generated JWT token as a string.</returns>
         public string CreateToken(UserAccount userAccount)
         {
             var claims = new List<Claim>

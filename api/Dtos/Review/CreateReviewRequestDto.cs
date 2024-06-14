@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace api.Dtos.Review
 {
+    /// <summary>
+    /// Data Transfer Object representing the creation of a Review in a HTTPPost method
+    /// </summary>
     public class CreateReviewRequestDto
     {
         [Required]

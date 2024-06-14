@@ -7,6 +7,9 @@ using api.Dtos.ReviewComment;
 // A reason to make dto's is to put the data validation here instead of the Model. If put in the model it'll apply it globally. 
 namespace api.Dtos.Review
 {
+    /// <summary>
+    /// Data Transfer Object representing a Review
+    /// </summary>
     public class ReviewDto
     {
         public int Id { get; set; }
@@ -26,6 +29,5 @@ namespace api.Dtos.Review
         public DateTime CreatedOn { get; set; } = DateTime.Now;
 
         public List<ReviewCommentDto> ReviewComments { get; set; }
-
     }
 }
